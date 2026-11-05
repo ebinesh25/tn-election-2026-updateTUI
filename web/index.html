@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Terminal-style Tamil Nadu election dashboard preview.">
+  <title>Tamil Nadu Election 2026 — Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="dashboard">
+    <header>
+      <h1>TAMIL NADU ELECTION 2026 - <span id="headline-status">DEMO</span></h1>
+      <div class="metadata">refresh <span id="interval">10</span>s <span class="divider">|</span> last <span id="last">--:--:--</span> <span class="divider">|</span> seats 234 <span class="divider">|</span> majority 118</div>
+      <p id="notice" role="status">DEMO DATA · The election endpoint is unavailable. Figures and candidates are illustrative.</p>
+    </header>
+    <div class="panels">
+      <section class="tally-panel" aria-labelledby="tally-title">
+        <h2 id="tally-title">SEAT TALLY</h2>
+        <div id="tally"></div>
+        <p class="majority">majority mark: 118</p>
+      </section>
+      <section class="constituencies" aria-labelledby="constituencies-title">
+        <h2 id="constituencies-title">CONSTITUENCIES</h2>
+        <div id="candidates"></div>
+      </section>
+    </div>
+    <section class="alliances" aria-labelledby="alliances-title">
+      <h2 id="alliances-title">ALLIANCE SUMMARY</h2>
+      <div id="alliances"></div>
+    </section>
+    <footer>
+      <div class="controls"><button id="refresh" type="button">[r] Refresh</button> <button id="faster" type="button">[+] Faster</button> <button id="slower" type="button">[-] Slower</button> <span class="divider">|</span> Declared: <span id="declared">0</span>/234</div>
+      <div class="next">next: <span id="countdown">10</span>s</div>
+    </footer>
+  </main>
+</body>
+</html>
