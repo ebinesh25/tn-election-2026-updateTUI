@@ -2,7 +2,7 @@
 
 A terminal-style election dashboard in two versions: the original shell TUI in `cli/` and a matching browser interface in `web/`.
 
-> **Data status:** The original Election Commission endpoint currently returns 404. The web preview displays clearly labelled illustrative demo data when the endpoint is unavailable or blocked by browser CORS. Demo figures are not election results. The CLI relies on that endpoint and will not show results while it is unavailable. Alliance groupings follow the original CLI and are not an official classification.
+> **Data status:** The original Election Commission endpoint currently returns 404. The web preview uses simulated demo data and changes it every five seconds by default; it does not connect to the endpoint. Demo figures are not election results. The CLI relies on that endpoint and will not show results while it is unavailable. Alliance groupings follow the original CLI and are not an official classification.
 
 ## Web preview
 
@@ -14,7 +14,7 @@ cd tn-election-2026-updateTUI
 python3 -m http.server 8000 --directory web
 ```
 
-Open <http://localhost:8000>. No npm installation or build is needed. Use the buttons or `r`, `+`, and `-` to refresh or change the interval. The browser retries the configured endpoint automatically; a successful response also requires that the endpoint allow cross-origin requests.
+Open <http://localhost:8000>. No npm installation or build is needed. Use the buttons or `r`, `+`, and `-` to refresh or change the interval. Each refresh simulates a seat moving between parties while keeping the total at 234; figures are generated locally in each browser.
 
 ## CLI installation and use
 
